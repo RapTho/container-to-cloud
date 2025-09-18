@@ -1,6 +1,4 @@
-# Overview
-
-## Course content
+# Course content
 
 This course will enable you to:
 

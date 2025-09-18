@@ -1,4 +1,4 @@
-# Deploying mosquitto on IBM Cloud
+# Deploying the app on IBM Cloud
 
 In this guide, you'll learn how to:
 
