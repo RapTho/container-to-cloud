@@ -28,13 +28,9 @@ These variable can now be used throughout your requests.
 
 #### Using Variables in Requests
 
-In your request URL or headers, use double curly braces:
+In your request URL, use double curly braces as the URL `{{baseUrl}}`
 
-```bash
-{{baseUrl}}
-```
-
-Bruno will automatically substitute the values when sending the request.
+Bruno will automatically substitute the values with [collection variables](https://docs.usebruno.com/testing/script/vars) when sending the request.
 
 #### Setting Authentication on the Collection
 
