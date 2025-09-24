@@ -67,18 +67,9 @@ Kubernetes (K8s) is an open-source platform for automating deployment, scaling, 
 - Automated rollouts and rollbacks
 - Storage orchestration
 
-### Knative
-
-Knative is a Kubernetes-based platform that:
-
-- Simplifies container deployment
-- Provides serverless capabilities on Kubernetes
-- Automatically scales containers based on demand (even to zero when not in use)
-- Handles routing and network configuration
-
 ### IBM Code Engine
 
-IBM Code Engine is a fully managed, serverless platform that runs your containerized workloads, including batch jobs and applications. It's built on Knative and Kubernetes but abstracts away their complexity.
+IBM Code Engine is a fully managed, serverless platform that runs your containerized workloads, including batch jobs and applications. It's built on Kubernetes but abstracts away their complexity.
 
 Benefits:
 
@@ -90,7 +81,7 @@ Benefits:
 
 In this course, you'll deploy your containerized Python application to IBM Code Engine, experiencing firsthand how these technologies work together to simplify application deployment and management.
 
-## The Container Workflow
+## The Container workflow
 
 Throughout this course, you'll follow this typical container workflow:
 
