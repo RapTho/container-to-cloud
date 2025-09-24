@@ -39,15 +39,6 @@ export IMAGE_NAME=backend-${USER}
 export IMAGE_TAG=2.0  # Updated from 1.0 to 2.0
 ```
 
-For Windows PowerShell users:
-
-```powershell
-$env:RESOURCE_GROUP = "iot-digital-engineering"
-$env:CR_NAMESPACE = "hslu-iot-digital-engineering"
-$env:IMAGE_NAME = "backend-${USER}"
-$env:IMAGE_TAG = "2.0"  # Updated from 1.0 to 2.0
-```
-
 2. Build the new container image:
 
 ```bash
@@ -96,13 +87,6 @@ ibmcloud ce project select --name myProjectName
 ```bash
 ibmcloud ce app update --name backend-${USER} \
   --image de.icr.io/${CR_NAMESPACE}/${IMAGE_NAME}:${IMAGE_TAG}
-```
-
-For Windows PowerShell users:
-
-```powershell
-ibmcloud ce app update --name backend-$env:USERNAME `
-  --image de.icr.io/$env:CR_NAMESPACE/$env:IMAGE_NAME:$env:IMAGE_TAG
 ```
 
 3. Verify the application is running with the new version:

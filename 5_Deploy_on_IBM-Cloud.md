@@ -34,18 +34,13 @@ export IMAGE_TAG=1.0
 
 > Note: These variables are only available in the current session.
 
-### Setting environment variables on Windows (PowerShell)
+#### Setting environment variables on Windows
 
-If you're using **Windows with PowerShell**, use the following syntax instead of `export`:
+Check the Windows command sections in the [pre-requisites](./1_Pre-requisites.md#environment-variables) chapter for instructions on how to execute this on Windows. The `USER` environment variable is automatically set to your username on macOS and Linux. Wherever you see `$USER`, use `USERNAME` on Windows. Below an example for Windows Powershell:
 
 ```powershell
-$env:RESOURCE_GROUP = "iot-digital-engineering"
-$env:CR_NAMESPACE = "hslu-iot-digital-engineering"
-$env:IMAGE_NAME = "backend-${env:IMAGE_NAME}"
-$env:IMAGE_TAG = "1.0"
+$env:IMAGE_NAME = "backend-$env:USERNAME"
 ```
-
-You can access them the same way in subsequent commands (e.g., `$env:IMAGE_NAME`) or just use them inline like `${env:IMAGE_NAME}` if needed in PowerShell scripting.
 
 ## Select IBM Cloud context
 
@@ -130,22 +125,6 @@ ibmcloud ce app create --name backend-${USER} \
   --min-scale 1 \
   --max-scale 1 \
   --cpu 0.25 \
-  --memory 0.5G
-```
-
-### Running on Windows (PowerShell)
-
-In PowerShell, line continuations use backticks (\`) instead of backslashes. Here's the equivalent command:
-
-```powershell
-ibmcloud ce app create --name backend-$env:USERNAME `
-  --image de.icr.io/$env:CR_NAMESPACE/$env:IMAGE_NAME:$env:IMAGE_TAG `
-  --registry-secret ibm-container-registry-$env:USERNAME `
-  --env-from-secret api-credentials-$env:USERNAME `
-  --port 8000 `
-  --min-scale 1 `
-  --max-scale 1 `
-  --cpu 0.25 `
   --memory 0.5G
 ```
 
