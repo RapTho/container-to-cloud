@@ -8,11 +8,12 @@ The documentation is hosted here [https://raptho.github.io/container-to-cloud/](
 
 This course will enable you to:
 
-- Build your own container image
-- Upload the container image to IBM's container registry
+- Build a small Python FastAPI backend.
+- Test the app using an API Test Client
+- Containerize your Python FastAPI backend
+- Upload the container image to IBM Container Registry
 - Deploy the container image to IBM Code Engine
-- Test the app
-- Rollout updates
+- Rollout updates of your FastAPI backend
 
 ## Chapters
 
