@@ -17,6 +17,7 @@ This course will enable you to:
 
 ## Chapters
 
+- [Fundamentals](0_Theory.md)
 - [Install pre-requisites](./1_Pre-requisites.md)
 - [The Python app](./2_The_Python_app.md)
 - [Test the app](./3_API-client.md)
