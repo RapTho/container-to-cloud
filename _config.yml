@@ -1,0 +1,12 @@
+title: Container to Cloud
+description: Workshop documentation to build a local container image and deploy it ti IBM Code Engine
+theme: minima
+markdown: kramdown
+highlighter: rouge
+
+exclude:
+  - LICENSE
+  - files/
+  - .vscode/
+  - .venv
+  - .gitignore
