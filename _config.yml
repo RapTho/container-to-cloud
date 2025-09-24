@@ -8,7 +8,6 @@ highlighter: rouge
 
 exclude:
   - LICENSE
-  - files/
   - .vscode/
   - .venv
   - .gitignore
