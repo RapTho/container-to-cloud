@@ -1,0 +1,28 @@
+flowchart TD
+    subgraph "Local Environment"
+        A[Python FastAPI App] --> B[Containerfile]
+        B --> C["podman build"]
+        C --> D["<font color='black'>Container Image (backend:1.0)"]
+    end
+
+    subgraph "IBM Cloud"
+        subgraph "IBM Container Registry"
+            E["Container Image (de.icr.io/namespace/image:tag)"]
+        end
+
+        subgraph "IBM Code Engine"
+            F[API Credentials Secret]
+            G[Registry Access Secret]
+            H[Deployed Application]
+        end
+    end
+
+    D -- "Push local image to registry" --> E
+    G -- "Authenticate Code Engine to registry" --> E
+    E -- "Deploy image from registry to Code Engine" --> H
+    F -- "Set environment variables" --> H
+
+    style A fill:#228B22,stroke:#333,stroke-width:2px
+    style D fill:#F5DEB3,stroke:#333,stroke-width:2px
+    style E fill:#9932CC,stroke:#333,stroke-width:2px
+    style H fill:#00008B,stroke:#333,stroke-width:2px

@@ -27,4 +27,22 @@ This course will enable you to:
 
 ## Architecture
 
-# TODO
+![architecture](./files/images/architecture.svg)
+
+The diagram illustrates the complete workflow:
+
+1. **Local Development**:
+
+   - Create a Python FastAPI application
+   - Define a Containerfile
+   - Build a container image using Podman/Docker
+
+2. **IBM Container Registry**:
+
+   - Tag the local image with the IBM Container Registry URL
+   - Push the container image to IBM Container Registry
+
+3. **IBM Code Engine**:
+   - Create secrets for registry access and API credentials
+   - Deploy the container from IBM Container Registry to IBM Code Engine
+   - The application runs with the configured environment variables
