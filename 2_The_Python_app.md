@@ -81,10 +81,4 @@ on MacOS / Linux
 UN=myUsername PW=myPassword python app.py
 ```
 
-on Windows
-
-```powershell
-$Env:UN = "myUsername"
-$Env:PW = "myPassword"
-python app.py
-```
+Check the Windows command sections in the [pre-requisites](./1_Pre-requisites.md#environment-variables) chapter for instructions on how to execute this on Windows
