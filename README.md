@@ -2,7 +2,7 @@
 
 ## Link to documentation
 
-The documentation is hosted here [https://github.com/RapTho/container-to-cloud/settings/pages](https://github.com/RapTho/container-to-cloud/settings/pages)
+The documentation is hosted here [https://raptho.github.io/container-to-cloud/](https://raptho.github.io/container-to-cloud/)
 
 ## Course content
 
