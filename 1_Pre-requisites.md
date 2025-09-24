@@ -86,4 +86,58 @@ ibmcloud version
 python --version
 ```
 
+## Environment variables
+
+Throught the workshop, we'll be using environment variables to configure our applications and execute commands. How to set those environment variables will depend on your operating system and Command Line Interface.
+Below you find instructions for macOS/Linux and Windows. The rest of the lab is primarely documented for macOS/Linux. Come back here to see how you'd adapt the instructions for Windows.
+
+### macOS & Linux
+
+```bash
+# Setting variables
+export VARIABLE_NAME=value
+export ANOTHER_VAR="value with spaces"
+
+# Using variables
+echo $VARIABLE_NAME
+command --param=${VARIABLE_NAME}
+
+# Setting multiple variables inline for a single command
+VARIABLE1=value1 VARIABLE2=value2 command
+```
+
+### Windows (Powershell)
+
+```powershell
+# Setting variables
+$env:VARIABLE_NAME = "value"
+$env:ANOTHER_VAR = "value with spaces"
+
+# Using variables
+echo $env:VARIABLE_NAME
+command --param=$env:VARIABLE_NAME
+
+# Setting multiple variables for a command (must be set before running command)
+$env:VARIABLE1 = "value1"
+$env:VARIABLE2 = "value2"
+command
+```
+
+### WIndows (Command Prompt)
+
+```bat
+:: Setting variables
+set VARIABLE_NAME=value
+set ANOTHER_VAR=value with spaces
+
+:: Using variables
+echo %VARIABLE_NAME%
+command --param=%VARIABLE_NAME%
+
+:: Setting multiple variables for a command (must be set before running command)
+set VARIABLE1=value1
+set VARIABLE2=value2
+command
+```
+
 Once everything is installed and working, you're ready to begin!
