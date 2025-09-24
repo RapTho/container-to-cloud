@@ -30,7 +30,7 @@ These variable can now be used throughout your requests.
 
 In your request URL or headers, use double curly braces:
 
-```
+```bash
 {{baseUrl}}
 ```
 
