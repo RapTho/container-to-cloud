@@ -78,7 +78,7 @@ Start the Python app locally
 on MacOS / Linux
 
 ```bash
-USERNAME=myUsername PASSWORD=myPassword python app.py
+UN=myUsername PW=myPassword python app.py
 ```
 
 on Windows

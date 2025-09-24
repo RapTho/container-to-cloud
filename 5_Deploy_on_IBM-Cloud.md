@@ -17,7 +17,7 @@ This workflow is ideal for hosting custom services like a secured API backend, b
 
 Install the Code Engine and Container Registry plugins:
 
-```
+```bash
 ibmcloud plugin install code-engine container-registry
 ```
 
@@ -25,7 +25,7 @@ ibmcloud plugin install code-engine container-registry
 
 These variables make the rest of the commands easier to reuse. Choose a **unique** `IMAGE_NAME`
 
-```
+```bash
 export RESOURCE_GROUP=iot-digital-engineering
 export CR_NAMESPACE=hslu-iot-digital-engineering
 export IMAGE_NAME=backend-${USER}
@@ -41,7 +41,7 @@ If you're using **Windows with PowerShell**, use the following syntax instead of
 ```powershell
 $env:RESOURCE_GROUP = "iot-digital-engineering"
 $env:CR_NAMESPACE = "hslu-iot-digital-engineering"
-$env:IMAGE_NAME = "backend-${USER} "
+$env:IMAGE_NAME = "backend-${env:IMAGE_NAME}"
 $env:IMAGE_TAG = "1.0"
 ```
 
@@ -117,7 +117,7 @@ ibmcloud ce registry create --name ibm-container-registry-${USER} --server de.ic
 ibmcloud ce secret create --name api-credentials-${USER} --from-literal UN=myUsername --from-literal PW=myPassword
 ```
 
-## Deploy mosquitto to Code Engine
+## Deploy the Python app to IBM Code Engine
 
 Run the following to create and deploy the application:
 

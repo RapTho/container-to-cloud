@@ -3,6 +3,7 @@ import sys
 import requests
 from fastapi import FastAPI, HTTPException, Depends, status
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
+from fastapi.responses import JSONResponse
 
 app = FastAPI()
 security = HTTPBasic()
@@ -11,6 +12,7 @@ security = HTTPBasic()
 UN = os.environ.get("UN")
 PW = os.environ.get("PW")
 PORT = os.environ.get("PORT", 8000)
+VERSION = os.environ.get("VERSION", 2)
 
 if not UN or not PW:
     print("Error: Both USERNAME and PASSWORD environment variables must be defined.", flush=True)
@@ -25,6 +27,13 @@ def get_joke(credentials: HTTPBasicCredentials = Depends(security)):
         raise HTTPException( status_code=status.HTTP_502_BAD_GATEWAY, detail="Failed to fetch joke" )
     joke = response.json().get("value", "No joke found")
     return joke
+
+@app.get("/health")
+def health_check():
+    return JSONResponse({
+        "status": "healthy",
+        "version": VERSION
+    })
 
 if __name__ == "__main__":
     import uvicorn
