@@ -60,4 +60,4 @@ To apply authentication across all requests in a collection:
 #### OPTIONAL: Code generation
 
 Once you successfully managed to use an API, you can use Bruno to generate code samples in various languages / libraries <br />
-![bruno_code_genretaion](./files/bruno_code_generation.png)
+![bruno_code_genretaion](./files/images/bruno_code_generation.png)
