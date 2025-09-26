@@ -26,10 +26,11 @@ ibmcloud plugin install code-engine container-registry
 These variables make the rest of the commands easier to reuse. Choose a **unique** `IMAGE_NAME`
 
 ```bash
-export RESOURCE_GROUP=iot-digital-engineering
-export CR_NAMESPACE=hslu-iot-digital-engineering
+export RESOURCE_GROUP=rotkreuz-dibm
+export CR_NAMESPACE=dibm
 export IMAGE_NAME=backend-${USER}
 export IMAGE_TAG=1.0
+export PROJECT_NAME=dibm
 ```
 
 > Note: These variables are only available in the current session.
@@ -53,7 +54,7 @@ ibmcloud target -g ${RESOURCE_GROUP}
 Select your Code Engine project:
 
 ```bash
-ibmcloud ce project select --name myProjectName
+ibmcloud ce project select --name ${PROJECT_NAME}
 ```
 
 ## Publish image to IBM Container Registry

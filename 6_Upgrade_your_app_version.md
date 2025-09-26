@@ -33,10 +33,11 @@ After making changes to your code, you need to rebuild your container image with
 1. Set environment variables (update the IMAGE_TAG to reflect the new version):
 
 ```bash
-export RESOURCE_GROUP=iot-digital-engineering
-export CR_NAMESPACE=hslu-iot-digital-engineering
+export RESOURCE_GROUP=rotkreuz-dibm
+export CR_NAMESPACE=dibm
 export IMAGE_NAME=backend-${USER}
 export IMAGE_TAG=2.0  # Updated from 1.0 to 2.0
+export PROJECT_NAME=dibm
 ```
 
 2. Build the new container image:
@@ -79,7 +80,7 @@ Finally, you need to update your application on IBM Code Engine to use the new c
 1. Select your Code Engine project:
 
 ```bash
-ibmcloud ce project select --name myProjectName
+ibmcloud ce project select --name ${PROJECT_NAME}
 ```
 
 2. Update the application with the new image:
