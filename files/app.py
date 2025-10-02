@@ -14,6 +14,12 @@ PW = os.environ.get("PW")
 PORT = os.environ.get("PORT", 8000)
 VERSION = os.environ.get("VERSION", 2)
 
+try:
+    PORT = int(PORT)
+except ValueError:
+    print("Error: Invalid port number. Please provide a valid integer.", flush=True)
+    sys.exit(1)
+
 if not UN or not PW:
     print("Error: Both USERNAME and PASSWORD environment variables must be defined.", flush=True)
     sys.exit(1)
