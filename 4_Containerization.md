@@ -86,7 +86,7 @@ Replace `/path/to/Containerfile` with the actual path the folder containing the 
 To test your image locally, run:
 
 ```bash
-podman run -d -p 8000:8000 -e UN=myUsername -e PW=myPassword --name backend backend:1.0
+podman run -d -p 8000:8000 -e UN=myUsername -e PW=myPassword --name backend-${USER} backend:1.0
 ```
 
 - `-d` starts the container in the background. Use `podman ps` to display running containers. Add the `-a` option to also display stopped and crashed containers.
